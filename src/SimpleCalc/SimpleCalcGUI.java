@@ -15,7 +15,7 @@ public class  SimpleCalcGUI extends JFrame {
     public SimpleCalcGUI() {
         btnCompute.addActionListener(new ActionListener() {
             @Override
-            public void action Performed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e) {
                 opConputer();
             }
         });
