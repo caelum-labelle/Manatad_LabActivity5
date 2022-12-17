@@ -19,6 +19,8 @@ public class LeapYearGUI extends JFrame {
         });
     }
 
+
+
     public static void main(String[] args) {
         LeapYearGUI ch = new LeapYearGUI();
         ch.setContentPane(ch.panel1);
