@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class FoodOrderingSystem extends JFrame {
+public class FoodOrderGUI extends JFrame {
     private JPanel panel1;
     private JCheckBox cPizza;
     private JRadioButton rbNone;
@@ -19,7 +19,7 @@ public class FoodOrderingSystem extends JFrame {
     private JRadioButton rb10;
     private JRadioButton rb15;
 
-    public FoodOrderingSystem() {
+    public FoodOrderGUI() {
         btnOrder.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -28,7 +28,7 @@ public class FoodOrderingSystem extends JFrame {
         });
     }
 
-    public void foodOrder() {
+    public void orders() {
         try {
             boolean ctr = false;
             double temp = 0;
@@ -89,7 +89,7 @@ public class FoodOrderingSystem extends JFrame {
     }
 
     public static void main(String[] args) {
-        FoodOrderingSystem ch = new FoodOrderingSystem();
+        FoodOrderGUI ch = new FoodOrderGUI();
         ch.setContentPane(ch.panel1);
         ch.setSize(600, 500);
         ch.setDefaultCloseOperation(EXIT_ON_CLOSE);
