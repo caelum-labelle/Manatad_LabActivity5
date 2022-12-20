@@ -35,4 +35,64 @@ public class FoodOrderGUI extends JFrame {
             }
         });
     }
+
+    public void orders() {
+        try {
+            boolean ctr = false;
+            double temp = 0;
+            double ans = 0;
+
+            if (cPizza.isSelected()) {
+                temp += 100;
+                ctr = true;
+            }
+            if (cBurger.isSelected()) {
+                temp += 80;
+                ctr = true;
+            }
+            if (cFries.isSelected()) {
+                temp += 65;
+                ctr = true;
+            }
+            if (cSoftDrinks.isSelected()) {
+                temp += 55;
+                ctr = true;
+            }
+            if (cTea.isSelected()) {
+                temp += 50;
+                ctr = true;
+            }
+            if (cSundae.isSelected()) {
+                temp += 40;
+                ctr = true;
+            }
+
+            if (rbNone.isSelected()) {
+                temp = temp;
+                ctr = true;
+            }
+            if (rb5.isSelected()) {
+                ans = temp * 0.05;
+                temp = temp - ans;
+                ctr = true;
+            }
+            if (rb10.isSelected()) {
+                ans = temp * 0.10;
+                temp = temp - ans;
+                ctr = true;
+            }
+            if (rb15.isSelected()) {
+                ans = temp * 0.15;
+                temp = temp - ans;
+                ctr = true;
+            }
+
+            if (ctr == false) {
+                throw new Exception("Invalid");
+            }
+            JOptionPane.showMessageDialog(panel1, "The total price is Php " + String.format("%2f", temp));
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+    }
 }
