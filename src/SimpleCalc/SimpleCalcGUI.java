@@ -31,7 +31,7 @@ public class SimpleCalcGUI extends JFrame {
         });
     }
 
-    public void opCompute() {
+    public void OpCompute() {
         try {
             String op = (String) cbOperations.getSelectedItem();
             double a = Double.parseDouble(tfNumber1.getText());
