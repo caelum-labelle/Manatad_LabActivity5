@@ -28,7 +28,6 @@ public class LeapYearGUI extends JFrame {
         });
     }
 
-
     public void checkYear() {
         try {
             if (tfYear.getText() == " ") {
