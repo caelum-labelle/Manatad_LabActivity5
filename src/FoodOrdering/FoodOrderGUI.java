@@ -28,7 +28,7 @@ public class FoodOrderGUI extends JFrame {
         ch.setTitle("Food Ordering System");
     }
 
-    public FoodOrderingSystem() {
+    public FoodOrderGUI() {
         btnOrder.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
