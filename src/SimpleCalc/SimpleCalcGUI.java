@@ -30,4 +30,32 @@ public class SimpleCalcGUI extends JFrame {
             }
         });
     }
+
+    public void OpCompute() {
+        try {
+            String op = (String) cbOperations.getSelectedItem();
+            double a = Double.parseDouble(tfNumber1.getText());
+            double b = Double.parseDouble(tfNumber2.getText());
+            double res = 0;
+
+            if (op == "+") {
+                res = a + b;
+                lblResult.setText(String.valueOf(String.format("%.0f", (res))));
+            }
+            if (op == "-"){
+                res = a - b;
+                lblResult.setText(String.valueOf(String.format("%.0f", (res))));
+            }
+            if (op == "*"){
+                res = a * b;
+                lblResult.setText(String.valueOf(String.format("%.0f", (res))));
+            }
+            if (op == "/"){
+                res = a / b;
+                lblResult.setText(String.valueOf(String.format("%.0f", (res))));
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage());
+        }
+    }
 }
