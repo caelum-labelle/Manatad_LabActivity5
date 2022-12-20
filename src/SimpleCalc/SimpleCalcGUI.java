@@ -21,4 +21,13 @@ public class SimpleCalcGUI extends JFrame {
         ch.setVisible(true);
         ch.setTitle("Simple Calculator");
     }
+
+    public SimpleCalcGUI() {
+        btnCompute.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                opConputer();
+            }
+        });
+    }
 }
