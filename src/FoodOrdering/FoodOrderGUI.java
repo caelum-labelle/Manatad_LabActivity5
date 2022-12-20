@@ -7,9 +7,17 @@ import java.awt.event.ActionListener;
 
 public class FoodOrderGUI extends JFrame {
     private JPanel panel1;
-    private JCheckBox pizzaCheckBox;
-    private JRadioButton noneRadioButton;
-    private JButton orderButton;
+    private JCheckBox cPizza;
+    private JRadioButton rbNone;
+    private JButton btnOrder;
+    private JCheckBox cBurger;
+    private JCheckBox cFries;
+    private JCheckBox cSoftDrinks;
+    private JCheckBox cTea;
+    private JCheckBox cSundae;
+    private JRadioButton rb5;
+    private JRadioButton rb10;
+    private JRadioButton rb15;
 
     public static void main(String[] args) {
         FoodOrderGUI ch = new FoodOrderGUI();
@@ -18,5 +26,14 @@ public class FoodOrderGUI extends JFrame {
         ch.setDefaultCloseOperation(EXIT_ON_CLOSE);
         ch.setVisible(true);
         ch.setTitle("Food Ordering System");
+    }
+
+    public FoodOrderingSystem() {
+        btnOrder.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                orders();
+            }
+        });
     }
 }
