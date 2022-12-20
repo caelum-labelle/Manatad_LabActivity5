@@ -10,6 +10,15 @@ public class LeapYearGUI extends JFrame {
     private JTextField textField1;
     private JButton checkButton;
 
+    public LeapYearGUI() {
+        btnCheckYear.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                checkYear();
+            }
+        });
+    }
+
     public static void main(String[] args) {
         LeapYearGUI ch = new LeapYearGUI();
         ch.setContentPane(ch.panel1);
