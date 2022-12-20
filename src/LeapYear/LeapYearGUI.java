@@ -28,35 +28,4 @@ public class LeapYearGUI extends JFrame {
         });
     }
 
-    public void checkYear() {
-        try {
-            if (tfYear.getText() == " ") {
-                throw new IllegalArgumentException("Empty String!");
-            }
-            double yr = Double.parseDouble(tfYear.getText());
-            boolean leap;
-
-            if (yr < 0) {
-                throw new IllegalArgumentException("Input is invalid!");
-            }
-            if (yr % 4 == 0) {
-                if (yr % 100 == 0) {
-                    leap = yr % 400 == 0;
-                } else {
-                    leap = true;
-                }
-            } else {
-                leap = false;
-            }
-
-            if (leap) {
-                JOptionPane.showMessageDialog(panel1, "Leap Year");
-            } else {
-                JOptionPane.showMessageDialog(panel1, "Not a Leap Year");
-            }
-            tfYear.setText("");
-        } catch (IllegalArgumentException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-            tfYear.setText("");}
-    }
 }
